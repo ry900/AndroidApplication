@@ -8,38 +8,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
-
-    @Bind(R.id.tvMessage)
-    TextView title;
-
-    @Bind(R.id.btn1)
-    Button button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-
-        setUpToolbarAndFloatingActionButton();
-
-
-    }
-
-    //example of butterknife onClick binding (note the Butterknife.bind(this) in main
-    @OnClick(R.id.btn1)
-    public void sayHi(Button button) {
-        button.setText("Hello!");
-    }
-
-    public void setUpToolbarAndFloatingActionButton() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
